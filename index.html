@@ -27,36 +27,43 @@
 
 </head>
 
-<body class="bg-black text-white bg-cover bg-center" style="background-image: url('https://www.pexels.com/video/starry-night-sky-timelapse-5818973/');">
-    <div class="bg-black bg-opacity-80 min-h-screen">
-    <header class="sticky top-0 z-50 bg-gray-50 border-b border-gray-200">
-    <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <h1 class="text-xl font-semibold">SAKSHI</h1>
-        <ul class="flex gap-4 text-sm sm:text-base font-medium text-gray-700">
-        <li><a href="#about" class="hover:text-black transition">About</a></li>
-        <li><a href="#experience" class="hover:text-black transition">Experience</a></li>
-        <li><a href="#projects" class="hover:text-black transition">Projects</a></li>
-        <li><a href="#skills" class="hover:text-black transition">Skills</a></li>
-        <li><a href="#contact" class="hover:text-black transition">Contact</a></li>
+<body class="text-white">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="https://player.vimeo.com/external/5818973.sd.mp4?s=38fd8b4f4603be6204f3f74d9c50ad40eeb109e2&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay for readability -->
+  <div class="bg-black bg-opacity-80 min-h-screen">
+
+    <!-- Navbar (optional if already added) -->
+    <header class="sticky top-0 z-50 bg-black bg-opacity-80 border-b border-gray-800">
+      <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-semibold font-sora">Sakshi</h1>
+        <ul class="flex gap-4 text-sm sm:text-base font-medium text-gray-200">
+          <li><a href="#about" class="hover:text-white transition">About</a></li>
+          <li><a href="#experience" class="hover:text-white transition">Experience</a></li>
+          <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+          <li><a href="#skills" class="hover:text-white transition">Skills</a></li>
+          <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
     </header>
 
-
-  <!-- HERO SECTION -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-up">
-    <div class="text-center max-w-prose mx-auto">
-      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">SAKSHI</h1>
-      <p class="text-base sm:text-lg leading-relaxed mb-6">
-        CSE undergrad by degree. Content strategist by instinct. <br>
+    <!-- HERO SECTION -->
+    <section class="py-20 px-4 sm:px-6 max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-sora mb-4">Sakshi</h1>
+      <p class="text-base sm:text-lg leading-relaxed mb-6 font-inter">
+        CSE undergrad by degree. Content strategist by instinct.<br />
         I build smart systems and bold stories — and I’m just getting started.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="assets/resume.pdf" class="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition">Resume</a>
         <a href="mailto:sakshiny08@gmail.com" class="px-6 py-2 border border-white text-white rounded-full hover:bg-gray-800 transition">Say Hi</a>
       </div>
-    </div>
-  </section>
+    </section>
+
 
   <!-- ABOUT SECTION -->
   <section id="about" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-right">
