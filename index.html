@@ -14,12 +14,13 @@
         font-family: 'Inter', sans-serif;
         }
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
 
   <body class="bg-gray-50 text-gray-900">
 
     <!-- HERO SECTION -->
-    <section class="py-20 px-6 max-w-3xl mx-auto">
+    <section class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
         <h1 class="text-5xl font-extrabold mb-4">Sakshi</h1>
         <p class="text-lg max-w-xl mb-6">
         CSE undergrad by degree. Content strategist by instinct. <br>
@@ -34,7 +35,7 @@
   
 
     <!-- ABOUT SECTION -->
-    <section class="py-20 px-6 max-w-3xl mx-auto">
+    <section class="py-20 px-6 max-w-3xl mx-auto"data-aos="fade-right">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
         <p class="text-lg mb-6">
         I’m a Computer Science student with 2+ years of experience blending tech with storytelling — from designing warranty systems at HAL to crafting SEO-driven content for global startups.
@@ -51,7 +52,7 @@
     </section>
 
     <!-- EXPERIENCE SECTION -->
-    <section class="py-20 px-6 max-w-3xl mx-auto">
+    <section class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-left">
         <h2 class="text-3xl font-semibold mb-8">Experience</h2>
     
         <!-- Experience Item -->
@@ -97,7 +98,7 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section class="py-20 px-6 max-w-3xl mx-auto">
+    <section class="py-20 px-6 max-w-3xl mx-auto" data-aos="zoom-in-up">
         <h2 class="text-3xl font-semibold mb-8">Projects</h2>
     
         <div class="mb-10">
@@ -130,7 +131,7 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section class="py-20 px-6 max-w-3xl mx-auto">
+    <section class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
         <h2 class="text-3xl font-semibold mb-8">Skills</h2>
     
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
@@ -175,7 +176,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="py-20 px-6 max-w-3xl mx-auto">
+    <section class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
         <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
         <p class="text-lg mb-6">Got a project, opportunity, or playlist recommendation? I’m all ears.</p>
         <div class="flex justify-center gap-6 text-lg">
@@ -193,6 +194,13 @@
   
   
   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
+    </script>
 
   </body>
 </html>
