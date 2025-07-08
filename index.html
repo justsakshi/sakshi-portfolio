@@ -19,9 +19,28 @@
       font-family: 'Inter', sans-serif;
     }
   </style>
+  <style>
+    html {
+        scroll-behavior: smooth;
+    }
+    </style>
+
 </head>
 
 <body class="bg-gray-50 text-gray-900">
+    <header class="sticky top-0 z-50 bg-gray-50 border-b border-gray-200">
+    <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-semibold">Sakshi</h1>
+        <ul class="flex gap-4 text-sm sm:text-base font-medium text-gray-700">
+        <li><a href="#about" class="hover:text-black transition">About</a></li>
+        <li><a href="#experience" class="hover:text-black transition">Experience</a></li>
+        <li><a href="#projects" class="hover:text-black transition">Projects</a></li>
+        <li><a href="#skills" class="hover:text-black transition">Skills</a></li>
+        <li><a href="#contact" class="hover:text-black transition">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
 
   <!-- HERO SECTION -->
   <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-up">
@@ -39,7 +58,7 @@
   </section>
 
   <!-- ABOUT SECTION -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-right">
+  <section id="about" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-right">
     <div class="max-w-prose mx-auto">
       <h2 class="text-3xl font-semibold mb-4">About Me</h2>
       <p class="text-base sm:text-lg leading-relaxed mb-6">
@@ -57,7 +76,7 @@
     </div>
   </section>
   <!-- EXPERIENCE SECTION -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-left">
+  <section id="experience" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-left">
     <div class="max-w-prose mx-auto">
       <h2 class="text-3xl font-semibold mb-8">Experience</h2>
 
@@ -92,7 +111,7 @@
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="zoom-in-up">
+  <section id="projects" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="zoom-in-up">
     <div class="max-w-prose mx-auto">
       <h2 class="text-3xl font-semibold mb-8">Projects</h2>
       <div class="space-y-10 text-base sm:text-lg leading-relaxed">
@@ -117,7 +136,7 @@
   </section>
 
   <!-- SKILLS SECTION -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-up">
+  <section id="skills" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-up">
     <div class="max-w-prose mx-auto">
       <h2 class="text-3xl font-semibold mb-8">Skills</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-base sm:text-lg">
@@ -160,7 +179,7 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto text-center" data-aos="fade-up">
+  <section id="contact" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto text-center" data-aos="fade-up">
     <div class="max-w-prose mx-auto">
       <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
       <p class="text-base sm:text-lg mb-6 leading-relaxed">Got a project, opportunity, or playlist recommendation? I’m all ears.</p>
