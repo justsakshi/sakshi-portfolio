@@ -5,44 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sakshi | Portfolio</title>
 
-  <!-- Tailwind CSS (stable) -->
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- AOS scroll animations -->
+  <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Inter', sans-serif;
     }
-  </style>
-  <style>
-    html {
-        scroll-behavior: smooth;
+    h1, h2, h3 {
+      font-family: 'Sora', sans-serif;
     }
-</style>
-
+  </style>
 </head>
 
-<body class="text-white">
+<body class="bg-black text-white">
   <!-- Video Background -->
   <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-1]">
-  <source src="assets/starry.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+    <source src="assets/starry.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-
-  <!-- Overlay for readability -->
+  <!-- Overlay Wrapper -->
   <div class="bg-black bg-opacity-80 min-h-screen">
 
-    <!-- Navbar (optional if already added) -->
+    <!-- Navbar -->
     <header class="sticky top-0 z-50 bg-black bg-opacity-80 border-b border-gray-800">
-      <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-        <h1 class="text-xl font-semibold font-sora">Sakshi</h1>
-        <ul class="flex gap-4 text-sm sm:text-base font-medium text-gray-200">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-semibold">SAKSHI</h1>
+        <ul class="flex gap-6 text-sm sm:text-base font-medium text-gray-200">
           <li><a href="#about" class="hover:text-white transition">About</a></li>
           <li><a href="#experience" class="hover:text-white transition">Experience</a></li>
           <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
@@ -53,166 +52,161 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="py-20 px-4 sm:px-6 max-w-3xl mx-auto text-center" data-aos="fade-down">
-      <h1 class="text-4xl sm:text-5xl font-extrabold font-sora mb-4">Sakshi</h1>
-      <p class="text-base sm:text-lg leading-relaxed mb-6 font-inter">
-        CSE undergrad by degree. Content strategist by instinct.<br />
-        I build smart systems and bold stories — and I’m just getting started.
+    <section class="py-[120px] px-6 max-w-6xl mx-auto text-center" data-aos="fade-down">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">SAKSHI</h1>
+      <p class="text-lg sm:text-xl leading-relaxed text-gray-300 max-w-2xl mx-auto mb-6">
+        CSE undergrad by degree. Content strategist by instinct. I build smart systems and bold stories — and I’m just getting started.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="assets/resume.pdf" class="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition">Resume</a>
-        <a href="mailto:sakshiny08@gmail.com" class="px-6 py-2 border border-white text-white rounded-full hover:bg-gray-800 transition">Say Hi</a>
+        <a href="mailto:sakshiny08@gmail.com" class="px-6 py-2 border border-white text-white rounded-full hover:bg-white hover:text-black transition">Say Hi</a>
       </div>
     </section>
 
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-[120px] px-6 max-w-6xl mx-auto" data-aos="fade-up">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-semibold tracking-tight mb-6">About Me</h2>
+        <p class="text-lg leading-relaxed text-gray-300 mb-6">
+          I’m a Computer Science student with 2+ years of experience blending tech with storytelling — from designing warranty systems at HAL to crafting SEO-driven content for global startups.
+        </p>
+        <p class="text-lg leading-relaxed text-gray-300 mb-6">
+          I specialize in making ideas clear, engaging, and scalable. Whether it's a product demo, a data-backed blog, or a user dashboard — I shape it with precision and purpose.
+        </p>
+        <ul class="list-disc pl-5 text-lg text-gray-300 space-y-2">
+          <li><strong>Tech Stack:</strong> Python, SQL, PL/SQL, Streamlit, OpenCV, HTML/CSS/JS</li>
+          <li><strong>Creative Stack:</strong> SEO, Copywriting, Figma, Canva, Product Messaging</li>
+          <li><strong>Tools I Use:</strong> Git, MS Excel, Google Suite, Notion</li>
+          <li><strong>Soft Skills:</strong> Communication, Time Management, Adaptability</li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-right">
-    <div class="max-w-prose mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-      <p class="text-base sm:text-lg leading-relaxed mb-6">
-        I’m a Computer Science student with 2+ years of experience blending tech with storytelling — from designing warranty systems at HAL to crafting SEO-driven content for global startups.
-      </p>
-      <p class="text-base sm:text-lg leading-relaxed mb-6">
-        I specialize in making ideas clear, engaging, and scalable. Whether it's a product demo, a data-backed blog, or a user dashboard — I shape it with precision and purpose.
-      </p>
-      <ul class="list-disc pl-5 text-base sm:text-lg leading-relaxed">
-        <li><strong>Tech Stack:</strong> Python, SQL, PL/SQL, Streamlit, OpenCV, HTML/CSS/JS</li>
-        <li><strong>Creative Stack:</strong> SEO, Copywriting, Figma, Canva, Product Messaging</li>
-        <li><strong>Tools I Use:</strong> Git, MS Excel, Google Suite, Notion</li>
-        <li><strong>Soft Skills:</strong> Communication, Time Management, Adaptability</li>
-      </ul>
-    </div>
-  </section>
-  <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-left">
-    <div class="max-w-prose mx-auto">
-      <h2 class="text-3xl font-semibold mb-8">Experience</h2>
-
-      <div class="space-y-10 text-base sm:text-lg leading-relaxed">
-        <div>
-          <h3 class="text-xl font-bold">Brand Story Copywriter Intern – TTBTE</h3>
-          <p class="text-sm text-gray-600">Oct 2024 – Mar 2025 | Remote</p>
-          <p class="mt-2">Shaped brand narratives, pitch decks, and GTM content for early-stage startups. Helped founders talk less like engineers and more like humans.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Content Marketing Intern – Wylo</h3>
-          <p class="text-sm text-gray-600">Apr 2024 – Sep 2024 | Remote</p>
-          <p class="mt-2">Wrote SEO-optimized content that moved people — and metrics. Drove user interest across digital funnels with blogs that didn’t sound like blogs.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">DBMS Intern – HAL</h3>
-          <p class="text-sm text-gray-600">May 2024 – Jun 2024 | On-site</p>
-          <p class="mt-2">Built a warranty management system from scratch using Streamlit and Oracle DB. Turned a paper-heavy process into a click-and-done solution.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Honorary Reporter – Korea.net</h3>
-          <p class="text-sm text-gray-600">May 2023 – April 2025 | Remote</p>
-          <p class="mt-2">Wrote cultural features bridging India and South Korea. Mixed research with relatability to reach global audiences.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">Content Writer Intern – OtakuKart</h3>
-          <p class="text-sm text-gray-600">Mar 2023 – Mar 2024 | Remote</p>
-          <p class="mt-2">Published over 600 articles on anime, tech, and entertainment. Learned the art of writing fast, sharp, and Google-friendly.</p>
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-[120px] px-6 max-w-6xl mx-auto" data-aos="fade-up">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-semibold tracking-tight mb-6">Experience</h2>
+        <div class="space-y-10 text-lg leading-relaxed text-gray-300">
+          <div>
+            <h3 class="text-xl font-bold">Brand Story Copywriter Intern – TTBTE</h3>
+            <p class="text-sm text-gray-400">Oct 2024 – Mar 2025 | Remote</p>
+            <p class="mt-2">Shaped brand narratives, pitch decks, and GTM content for early-stage startups.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Content Marketing Intern – Wylo</h3>
+            <p class="text-sm text-gray-400">Apr 2024 – Sep 2024 | Remote</p>
+            <p class="mt-2">Wrote SEO-optimized content that moved people — and metrics.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">DBMS Intern – HAL</h3>
+            <p class="text-sm text-gray-400">May 2024 – Jun 2024 | On-site</p>
+            <p class="mt-2">Built a warranty management system using Streamlit and Oracle DB.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Honorary Reporter – Korea.net</h3>
+            <p class="text-sm text-gray-400">May 2023 – April 2025 | Remote</p>
+            <p class="mt-2">Wrote cultural features bridging India and South Korea.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Content Writer Intern – OtakuKart</h3>
+            <p class="text-sm text-gray-400">Mar 2023 – Mar 2024 | Remote</p>
+            <p class="mt-2">Published 600+ articles on anime, tech, and entertainment.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="zoom-in-up">
-    <div class="max-w-prose mx-auto">
-      <h2 class="text-3xl font-semibold mb-8">Projects</h2>
-      <div class="space-y-10 text-base sm:text-lg leading-relaxed">
-        <div>
-          <h3 class="text-xl font-bold">Virtual Mouse Using Hand Gestures</h3>
-          <p class="mt-2">Built a vision-based mouse with Python, OpenCV & MediaPipe — no clicks, just gestures. Think Iron Man, but practical.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">AMC Warranty System @ HAL</h3>
-          <p class="mt-2">Designed a web app to track aircraft warranty using Streamlit and Oracle. Cut manual work, boosted accountability.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">House Price Prediction</h3>
-          <p class="mt-2">Built a regression model in Python that predicted home prices with surprising accuracy. Data science, meet real estate.</p>
-        </div>
-        <div>
-          <h3 class="text-xl font-bold">IEEE Survey Paper (in progress)</h3>
-          <p class="mt-2">Researching deep learning's role in pharmacogenomics. Making dense healthcare AI readable, relevant, and review-worthy.</p>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-[120px] px-6 max-w-6xl mx-auto" data-aos="fade-up">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-semibold tracking-tight mb-6">Projects</h2>
+        <div class="space-y-10 text-lg leading-relaxed text-gray-300">
+          <div>
+            <h3 class="text-xl font-bold">Virtual Mouse Using Hand Gestures</h3>
+            <p class="mt-2">Built a vision-based mouse using Python, OpenCV, and MediaPipe.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">AMC Warranty System @ HAL</h3>
+            <p class="mt-2">Designed a web app for aircraft warranty tracking using Streamlit + Oracle.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">House Price Prediction</h3>
+            <p class="mt-2">Built a regression model that predicts home prices with high accuracy.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">IEEE Survey Paper (in progress)</h3>
+            <p class="mt-2">Exploring deep learning for pharmacogenomics precision medicine.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto" data-aos="fade-up">
-    <div class="max-w-prose mx-auto">
-      <h2 class="text-3xl font-semibold mb-8">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-base sm:text-lg">
-        <div>
-          <h3 class="font-bold mb-2">Tech Stack</h3>
-          <ul class="list-disc list-inside">
-            <li>Python, SQL, PL/SQL</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Streamlit, OpenCV, MediaPipe</li>
-            <li>Oracle DB, MySQL</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Creative Stack</h3>
-          <ul class="list-disc list-inside">
-            <li>SEO, Copywriting</li>
-            <li>User Journey Mapping</li>
-            <li>Figma, Canva, Notion</li>
-            <li>Content Strategy</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Tools</h3>
-          <ul class="list-disc list-inside">
-            <li>Git, Google Suite, MS Excel</li>
-            <li>VS Code, Notion, ChatGPT</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Soft Skills</h3>
-          <ul class="list-disc list-inside">
-            <li>Communication</li>
-            <li>Time Management</li>
-            <li>Adaptability</li>
-            <li>Collaboration</li>
-          </ul>
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-[120px] px-6 max-w-6xl mx-auto" data-aos="fade-up">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-semibold tracking-tight mb-6">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-lg text-gray-300">
+          <div>
+            <h3 class="font-bold mb-2">Tech Stack</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Python, SQL, PL/SQL</li>
+              <li>HTML, CSS, JavaScript</li>
+              <li>Streamlit, OpenCV, MediaPipe</li>
+              <li>Oracle DB, MySQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2">Creative Stack</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>SEO, Copywriting</li>
+              <li>User Journey Mapping</li>
+              <li>Figma, Canva, Notion</li>
+              <li>Content Strategy</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2">Tools</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Git, Notion, Google Suite</li>
+              <li>VS Code, Excel, ChatGPT</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2">Soft Skills</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Communication</li>
+              <li>Adaptability</li>
+              <li>Time Management</li>
+              <li>Collaboration</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="py-12 sm:py-20 px-4 sm:px-6 max-w-3xl mx-auto text-center" data-aos="fade-up">
-    <div class="max-w-prose mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
-      <p class="text-base sm:text-lg mb-6 leading-relaxed">Got a project, opportunity, or a playlist recommendation? I’m all ears.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-base sm:text-lg">
-        <a href="mailto:sakshiny08@gmail.com" class="underline hover:text-gray-500">sakshiny08@gmail.com</a>
-        <a href="https://www.linkedin.com/in/sakshi-6a7a60282" target="_blank" class="underline hover:text-gray-500">LinkedIn</a>
-        <a href="https://github.com/justsakshi" target="_blank" class="underline hover:text-gray-500">GitHub</a>
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-[120px] px-6 max-w-6xl mx-auto text-center" data-aos="fade-up">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-4xl font-semibold tracking-tight mb-6">Let’s Connect</h2>
+        <p class="text-lg mb-8 text-gray-300 leading-relaxed">Got a project, opportunity, or playlist recommendation? I’m all ears.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 text-lg">
+          <a href="mailto:sakshiny08@gmail.com" class="underline hover:text-gray-400">Email</a>
+          <a href="https://www.linkedin.com/in/sakshi-6a7a60282" class="underline hover:text-gray-400" target="_blank">LinkedIn</a>
+          <a href="https://github.com/justsakshi" class="underline hover:text-gray-400" target="_blank">GitHub</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="py-6 text-center text-sm text-gray-500">
-    © 2025 Sakshi. All rights reserved.
-  </footer>
+    <!-- FOOTER -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 Sakshi. All rights reserved.
+    </footer>
+  </div>
 
-  <!-- AOS Scroll Animation Script -->
+  <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: false
-    });
+    AOS.init({ duration: 800, once: false });
   </script>
-</div>
 </body>
 </html>
