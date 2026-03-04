@@ -100,6 +100,11 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Divider line — follows cursor */}
+      <div
+        className="home__divider"
+        style={{ left: `${clampedPct}%` }}
+      />
     </main>
   )
 }
