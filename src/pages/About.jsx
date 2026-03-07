@@ -5,7 +5,7 @@ const timeline = [
   { year: '2023', event: <>Wrote for the internet before I knew what I was doing.<br/>Turns out, that's how you learn.</> },
   { year: '2024', event: <>Interned at HAL. Realised I could build things that actually mattered<br/>to people who weren't just evaluating me.</> },
   { year: '2024', event: <>Learned SEO at Wylo. Also learned that growth is slow,<br/>then suddenly it isn't.</> },
-  { year: '2024', event: <>Wrote brand stories at TTBTE. Understood for the first time<br/>that clarity is a form of kindness.</> },
+  { year: '2025', event: <>Wrote brand stories at TTBTE. Understood for the first time<br/>that clarity is a form of kindness.</> },
   { year: '2025', event: <>Built real systems at Precise Leads. Stopped being afraid<br/>of production environments.</> },
   { year: '2026', event: <>Graduating in June. More curious than when I started.<br/>That feels like the point.</> },
 ]
