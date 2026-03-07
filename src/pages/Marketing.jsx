@@ -135,8 +135,8 @@ export default function Marketing() {
             <span className="mkt-video__eyebrow">Beyond words</span>
             <h2>I edit video, too.</h2>
             <p>
-              Reels, short-form content, subtitled edits. Storytelling doesn't stop at copy —
-              sometimes the cut, the caption, and the pacing are the message.
+              Reels, short-form content, subtitled edits. Storytelling doesn't stop at copy.
+              Sometimes the cut, the caption, and the pacing are the message.
             </p>
             <a
               href="https://www.instagram.com/just.sakshi_/"
