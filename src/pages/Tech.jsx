@@ -3,15 +3,15 @@ import './Tech.css'
 
 const projects = [
   {
-    title: 'GTM Automation Pipelines',
+    title: 'GTM Engineer',
     org: 'Precise Leads',
     year: '2025 to present',
     desc: 'Built Python + Make/n8n automations syncing lead data across APIs. Maintains clean, deduped ICP datasets and uses LLMs for research and personalisation.',
-    tags: ['Python', 'n8n', 'Make', 'LLMs', 'REST APIs', 'JSON'],
+    tags: ['Python','Clay', 'n8n', 'Make', 'LLMs', 'REST APIs', 'JSON'],
     type: 'internship',
   },
   {
-    title: 'Aircraft Component Data System',
+    title: 'DBMS Project Intern',
     org: 'Hindustan Aeronautics Limited',
     year: '2024',
     desc: 'Oracle SQL + Streamlit dashboard automating 80% of manual data entry for 1000+ aircraft components. Improved query performance by 40%.',
@@ -21,11 +21,20 @@ const projects = [
   {
     title: 'Infra Asset Dashboard (infra-bot)',
     org: 'Personal Project',
-    year: '2025',
+    year: '2026',
     desc: 'Manages domains and email inboxes across clients. Tracks expiry, costs, and status in a live dashboard. Supports bulk actions, CSV import/export, and a Slack bot that sends daily reminders on weekdays so nothing expires unnoticed.',
     tags: ['Node.js', 'Express', 'MongoDB', 'Slack Bolt', 'Google Sheets', 'Render'],
     type: 'project',
     link: 'https://github.com/justsakshi/infra-bot',
+  },
+  {
+    title: 'Multi-Omics Pharmacogenomics Platform',
+    org: 'IEEE Research Paper',
+    year: '2026',
+    desc: 'A comprehensive platform for analyzing multi-omics data and predicting drug responses using machine learning. Integrates genomics, transcriptomics, proteomics, and drug response data to provide personalized medicine insights.',
+    tags: ['Python', 'Deep Learning', 'Multi-omics', 'Bioinformatics', 'IEEE'],
+    type: 'research',
+    link: 'https://github.com/justsakshi/multi-omics-pharmacogenomic',
   },
   {
     title: 'Vibe Matcher Prototype',
@@ -37,18 +46,9 @@ const projects = [
     link: 'https://github.com/justsakshi/vibe-matcher-prototype',
   },
   {
-    title: 'Multi-Omics Pharmacogenomics Platform',
-    org: 'IEEE Research Paper',
-    year: '2025',
-    desc: 'A comprehensive platform for analyzing multi-omics data and predicting drug responses using machine learning. Integrates genomics, transcriptomics, proteomics, and drug response data to provide personalized medicine insights.',
-    tags: ['Python', 'Deep Learning', 'Multi-omics', 'Bioinformatics', 'IEEE'],
-    type: 'research',
-    link: 'https://github.com/justsakshi/multi-omics-pharmacogenomic',
-  },
-  {
     title: 'Virtual Mouse via Hand Gestures',
     org: 'Personal Project',
-    year: '2024',
+    year: '2025',
     desc: 'Real-time gesture tracking using computer vision, achieving 92% detection accuracy with optimised pipeline latency.',
     tags: ['Python', 'OpenCV', 'MediaPipe'],
     type: 'project',
@@ -57,7 +57,7 @@ const projects = [
   {
     title: 'NoteHub',
     org: 'Personal Project',
-    year: '2024',
+    year: '2025',
     desc: 'Minimal and efficient note-taking app built with Flutter. Create, edit, reorder, and manage notes with a simple responsive interface. Uses Hive for local storage so all notes persist between sessions.',
     tags: ['Flutter', 'Dart', 'Hive'],
     type: 'project',
@@ -66,7 +66,7 @@ const projects = [
   {
     title: 'HENNGE Admission Challenge',
     org: 'Open Challenge',
-    year: '2024',
+    year: '2025',
     desc: 'Completed all missions including RFC6238 TOTP implementation and complex recursion-based algorithmic tasks.',
     tags: ['Python', 'Algorithms', 'TOTP'],
     type: 'project',
@@ -79,7 +79,7 @@ const skills = [
   { cat: 'AI & ML', items: ['LLM Integration', 'OpenAI APIs', 'Prompt Engineering', 'Data Preprocessing'] },
   { cat: 'Automation', items: ['Make', 'n8n', 'Zapier', 'Webhooks', 'REST APIs'] },
   { cat: 'Data', items: ['Oracle SQL', 'MySQL', 'Streamlit', 'Data Pipelines'] },
-  { cat: 'Tools', items: ['Git', 'GitHub', 'JSON', 'Clay', 'Apollo'] },
+  { cat: 'Tools', items: ['Git', 'GitHub', 'JSON', 'Clay', 'LLMs'] },
 ]
 
 export default function Tech() {

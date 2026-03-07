@@ -308,15 +308,19 @@
     display: none;
   }
 
-  /* Center strip: absolutely centered on the full screen */
+  /* Center strip: pinned to the divider line area */
   .home__center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 1.5rem 2rem;
     pointer-events: all;
     z-index: 30;
+    background: rgba(10, 10, 10, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-align: center;
   }
 
   .home__center--shift-tech,
@@ -325,12 +329,23 @@
   }
 
   .home__name {
-    font-size: clamp(2.8rem, 14vw, 4.5rem);
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+    letter-spacing: 0.2em;
+  }
+
+  .home__tagline {
+    font-size: 0.85rem;
+  }
+
+  .home__sub {
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
   }
 
   /* Show about link only on mobile */
   .home__about-link {
     display: inline-block !important;
+    margin-top: 0.75rem;
   }
 
   /* Mobile tap labels */
