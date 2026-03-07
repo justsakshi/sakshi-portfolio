@@ -1,49 +1,48 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Home.css'
 
 export default function Home() {
-  const [hovered, setHovered] = useState(null)
   const [loaded, setLoaded] = useState(false)
-  const [cursorX, setCursorX] = useState(50) // percentage across screen
+  const [cursorX, setCursorX] = useState(50)
+  const [isMobile, setIsMobile] = useState(false)
   const navigate = useNavigate()
-  const mainRef = useRef(null)
 
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 100)
-    return () => clearTimeout(t)
+    const checkMobile = () => setIsMobile(window.matchMedia('(hover: none)').matches || window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => { clearTimeout(t); window.removeEventListener('resize', checkMobile) }
   }, [])
 
   useEffect(() => {
-    // Only track cursor on non-touch devices
-    const isTouchDevice = window.matchMedia('(hover: none)').matches
-    if (isTouchDevice) return
-
+    if (isMobile) return
     const handleMouseMove = (e) => {
-      const pct = (e.clientX / window.innerWidth) * 100
-      setCursorX(pct)
+      setCursorX((e.clientX / window.innerWidth) * 100)
     }
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+  }, [isMobile])
 
-  // Map cursor position to flex ratio
-  // Center (50%) = equal 1:1 split
-  // Far left = tech gets up to 2x, marketing gets 0.3x
-  // Far right = marketing gets up to 2x, tech gets 0.3x
-  const clampedPct = Math.max(5, Math.min(95, cursorX))
-  const offset = (clampedPct - 50) / 50 // -1 to +1
+  const clamped = Math.max(5, Math.min(95, cursorX))
+  const offset = (clamped - 50) / 50 // -1 to +1
 
-  const techFlex  = hovered === 'tech' ? 1.6 : hovered === 'marketing' ? 0.4 : 1 - offset * 0.7
-  const mktFlex   = hovered === 'marketing' ? 1.6 : hovered === 'tech' ? 0.4 : 1 + offset * 0.7
+  // Smooth flex: center = 1:1, edges = 1.7:0.3
+  const techFlex = isMobile ? 1 : 1 - offset * 0.7
+  const mktFlex  = isMobile ? 1 : 1 + offset * 0.7
+
+  // Center strip fades when cursor is far to either side
+  const centerOpacity = isMobile ? 1 : 1 - Math.abs(offset) * 0.85
 
   return (
-    <main
-      ref={mainRef}
-      className={`home ${loaded ? 'home--loaded' : ''}`}
-    >
+    <main className={`home ${loaded ? 'home--loaded' : ''}`}>
+
       {/* Center identity strip */}
-      <div className={`home__center ${hovered ? `home__center--shift-${hovered}` : ''}`}>
+      <div
+        className="home__center"
+        style={{ opacity: centerOpacity }}
+      >
         <h1 className="home__name">SAKSHI</h1>
         <p className="home__tagline">Engineer&nbsp;&amp;&nbsp;<strong>Storyteller</strong></p>
         <p className="home__sub">Choose your side</p>
@@ -53,10 +52,8 @@ export default function Home() {
 
       {/* Tech side */}
       <div
-        className={`home__side home__side--tech ${hovered === 'tech' ? 'home__side--active' : ''} ${hovered === 'marketing' ? 'home__side--dim' : ''}`}
+        className="home__side home__side--tech"
         style={{ flex: techFlex }}
-        onMouseEnter={() => setHovered('tech')}
-        onMouseLeave={() => setHovered(null)}
         onClick={() => navigate('/tech')}
       >
         <div className="home__side-img-wrap">
@@ -79,10 +76,8 @@ export default function Home() {
 
       {/* Marketing side */}
       <div
-        className={`home__side home__side--marketing ${hovered === 'marketing' ? 'home__side--active' : ''} ${hovered === 'tech' ? 'home__side--dim' : ''}`}
+        className="home__side home__side--marketing"
         style={{ flex: mktFlex }}
-        onMouseEnter={() => setHovered('marketing')}
-        onMouseLeave={() => setHovered(null)}
         onClick={() => navigate('/marketing')}
       >
         <div className="home__side-img-wrap">
@@ -91,7 +86,7 @@ export default function Home() {
         </div>
         <div className="home__side-content home__side-content--right">
           <span className="home__side-label">The Storyteller</span>
-          <h2 className="home__side-title">Words <br/>&amp; Brands</h2>
+          <h2 className="home__side-title">Words<br/>&amp; Brands</h2>
           <ul className="home__side-tags">
             <li>Brand Copywriting</li>
             <li>SEO Content</li>
@@ -103,11 +98,6 @@ export default function Home() {
         <span className="home__mobile-label home__mobile-label--right">The Storyteller ↓</span>
       </div>
 
-      {/* Divider line — follows cursor */}
-      <div
-        className="home__divider"
-        style={{ left: `${clampedPct}%` }}
-      />
     </main>
   )
 }

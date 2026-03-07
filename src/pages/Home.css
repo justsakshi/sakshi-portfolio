@@ -17,7 +17,7 @@
   position: relative;
   overflow: hidden;
   cursor: none;
-  transition: flex 0.15s ease-out;
+  transition: flex 0.25s ease-out;
 }
 
 .home__side--active {
@@ -26,6 +26,21 @@
 
 .home__side--dim {
   flex: 0.4 !important;
+}
+
+/* Show side content when side is wide enough — driven by cursor naturally */
+.home__side-label,
+.home__side-title {
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.home__side-tags {
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+}
+
+.home__side-enter {
+  transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
 }
 
 /* Images */
