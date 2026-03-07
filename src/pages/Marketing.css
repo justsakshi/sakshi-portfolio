@@ -232,6 +232,77 @@
 
 .mkt-card__link:hover { opacity: 0.6; }
 
+/* ── Video editing section ── */
+.mkt-video {
+  padding: 6rem 5rem;
+  background: var(--ink);
+}
+
+.mkt-video__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 900px;
+}
+
+.mkt-video__eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+
+.mkt-video__text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 1rem;
+}
+
+.mkt-video__text p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.mkt-video__ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-marketing);
+  border-bottom: 1px solid var(--accent-marketing);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.mkt-video__ig-link:hover { opacity: 0.65; }
+
+.mkt-video__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.mkt-vtag {
+  font-size: 0.75rem;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.6);
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
 /* ── Also section ── */
 .mkt-also {
   padding: 6rem 5rem;
@@ -282,4 +353,7 @@
   .mkt-work { padding: 4rem 2rem; }
   .mkt-work__grid { grid-template-columns: 1fr; }
   .mkt-also { padding: 4rem 2rem; }
+  .mkt-video { padding: 4rem 2rem; }
+  .mkt-video__inner { flex-direction: column; gap: 2.5rem; }
+  .mkt-video__tags { flex-direction: row; flex-wrap: wrap; }
 }

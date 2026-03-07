@@ -50,6 +50,7 @@ const capabilities = [
   'Brand storytelling', 'Website copy', 'Landing page messaging',
   'SEO content strategy', 'Campaign ideation', 'Social media scripts',
   'Newsletter writing', 'Pitch narratives', 'Content audits', 'Brand voice development',
+  'Video editing', 'Subtitling & captions',
 ]
 
 export default function Marketing() {
@@ -124,6 +125,41 @@ export default function Marketing() {
               )}
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Video editing section */}
+      <section className="mkt-video reveal">
+        <div className="mkt-video__inner">
+          <div className="mkt-video__text">
+            <span className="mkt-video__eyebrow">Beyond words</span>
+            <h2>I edit video, too.</h2>
+            <p>
+              Reels, short-form content, subtitled edits. Storytelling doesn't stop at copy —
+              sometimes the cut, the caption, and the pacing are the message.
+            </p>
+            <a
+              href="https://www.instagram.com/just.sakshi_/"
+              target="_blank"
+              rel="noreferrer"
+              className="mkt-video__ig-link"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+              See my edits on Instagram ↗
+            </a>
+          </div>
+          <div className="mkt-video__tags">
+            <span className="mkt-vtag">Reels</span>
+            <span className="mkt-vtag">Short-form</span>
+            <span className="mkt-vtag">Subtitling</span>
+            <span className="mkt-vtag">Captions</span>
+            <span className="mkt-vtag">Pacing & cuts</span>
+            <span className="mkt-vtag">CapCut</span>
+          </div>
         </div>
       </section>
 
