@@ -46,6 +46,8 @@ export default function Home() {
         <h1 className="home__name">SAKSHI</h1>
         <p className="home__tagline">Engineer&nbsp;&amp;&nbsp;<strong>Storyteller</strong></p>
         <p className="home__sub">Choose your side</p>
+        <a href="/about" className="home__about-link">About me</a>
+        <div className="home__arrow">↓</div>
       </div>
 
       {/* Tech side */}
@@ -71,6 +73,7 @@ export default function Home() {
           </ul>
           <span className="home__side-enter">Enter →</span>
         </div>
+        <span className="home__mobile-label">The Engineer ↑</span>
       </div>
 
       {/* Marketing side */}
@@ -96,8 +99,14 @@ export default function Home() {
           </ul>
           <span className="home__side-enter">Enter →</span>
         </div>
+        <span className="home__mobile-label home__mobile-label--right">The Storyteller ↓</span>
       </div>
 
+      {/* Divider line — follows cursor */}
+      <div
+        className="home__divider"
+        style={{ left: `${clampedPct}%` }}
+      />
     </main>
   )
 }
