@@ -126,7 +126,7 @@ export default function Tech() {
             </a>
           </div>
           <div className="tech-hero__stat-row">
-            <div className="tech-hero__stat"><span>8.2</span><small>CGPA</small></div>
+            <div className="tech-hero__stat"><span>8.3</span><small>CGPA</small></div>
             <div className="tech-hero__stat"><span>2+</span><small>Years experience</small></div>
             <div className="tech-hero__stat"><span>5+</span><small>Projects shipped</small></div>
           </div>
