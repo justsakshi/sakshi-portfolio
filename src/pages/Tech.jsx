@@ -75,11 +75,11 @@ const projects = [
 ]
 
 const skills = [
-  { cat: 'Languages', items: ['Python', 'SQL', 'JavaScript', 'Dart'] },
-  { cat: 'AI & ML', items: ['LLM Integration', 'OpenAI APIs', 'Prompt Engineering', 'Data Preprocessing'] },
-  { cat: 'Automation', items: ['Make', 'n8n', 'Zapier', 'Webhooks', 'REST APIs'] },
-  { cat: 'Data', items: ['Oracle SQL', 'MySQL', 'Streamlit', 'Data Pipelines'] },
-  { cat: 'Tools', items: ['Git', 'GitHub', 'JSON', 'Clay', 'LLMs'] },
+  { cat: 'Languages', items: ['Python', 'JavaScript', 'SQL', 'Dart'] },
+  { cat: 'AI & LLMs', items: ['LLM Integration', 'OpenAI API', 'Prompt Engineering', 'RAG Pipelines', 'Data Preprocessing'] },
+  { cat: 'Automation & GTM', items: ['n8n', 'Make', 'Zapier', 'Clay', 'Webhooks', 'REST APIs'] },
+  { cat: 'Data & Databases', items: ['MySQL', 'Oracle SQL', 'Streamlit', 'Data Pipelines', 'Google Sheets API'] },
+  { cat: 'Dev Tools', items: ['Git', 'GitHub', 'VS Code', 'Postman', 'JSON'] },
 ]
 
 export default function Tech() {
