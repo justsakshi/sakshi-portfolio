@@ -2,12 +2,12 @@ import { useEffect } from 'react'
 import './About.css'
 
 const timeline = [
-  { year: '2023', event: <>Started writing: <br/>OtakuKart, Korea.net. 500+ articles.</>},
-  { year: '2024', event: <>DBMS Intern at HAL. <br/>Automated 80% of manual data entry for aerospace engineering teams.</> },
-  { year: '2024', event: <>Content Marketing at Wylo.<br/> +32% organic traffic. Learned SEO properly.</> },
-  { year: '2024', event: <>Brand Story Copywriter at TTBTE.<br/> Shaped messaging for early-stage startups.</> },
-  { year: '2025', event: <>GTM Engineer Intern at Precise Leads.<br/> Python, LLMs, automation pipelines, in production.</> },
-  { year: '2026', event: <>Graduating in June. <br/>Looking for what comes next.</> },
+  { year: '2023', event: <>Wrote for the internet before I knew what I was doing.<br/>Turns out, that's how you learn.</> },
+  { year: '2024', event: <>Interned at HAL. Realised I could build things that actually mattered<br/>to people who weren't just evaluating me.</> },
+  { year: '2024', event: <>Learned SEO at Wylo. Also learned that growth is slow,<br/>then suddenly it isn't.</> },
+  { year: '2024', event: <>Wrote brand stories at TTBTE. Understood for the first time<br/>that clarity is a form of kindness.</> },
+  { year: '2025', event: <>Built real systems at Precise Leads. Stopped being afraid<br/>of production environments.</> },
+  { year: '2026', event: <>Graduating in June. More curious than when I started.<br/>That feels like the point.</> },
 ]
 
 export default function About() {

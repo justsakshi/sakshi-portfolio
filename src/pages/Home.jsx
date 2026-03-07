@@ -28,13 +28,14 @@ export default function Home() {
   }, [])
 
   // Map cursor position to flex ratio
-  // Center (50%) = equal split, far left = tech dominant, far right = marketing dominant
-  const deadZone = 10 // px buffer around center before it starts shifting
+  // Center (50%) = equal 1:1 split
+  // Far left = tech gets up to 2x, marketing gets 0.3x
+  // Far right = marketing gets up to 2x, tech gets 0.3x
   const clampedPct = Math.max(5, Math.min(95, cursorX))
+  const offset = (clampedPct - 50) / 50 // -1 to +1
 
-  // When hovering a side via click intent, override with that
-  const techFlex = hovered === 'tech' ? 1.6 : hovered === 'marketing' ? 0.4 : 0.5 + (50 - clampedPct) / 100
-  const mktFlex  = hovered === 'marketing' ? 1.6 : hovered === 'tech' ? 0.4 : 0.5 + (clampedPct - 50) / 100
+  const techFlex  = hovered === 'tech' ? 1.6 : hovered === 'marketing' ? 0.4 : 1 - offset * 0.7
+  const mktFlex   = hovered === 'marketing' ? 1.6 : hovered === 'tech' ? 0.4 : 1 + offset * 0.7
 
   return (
     <main
