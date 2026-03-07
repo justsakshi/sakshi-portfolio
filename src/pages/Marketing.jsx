@@ -11,7 +11,7 @@ const work = [
     tags: ['Brand Voice', 'Website Copy', 'Launch Messaging', 'Freelance'],
   },
   {
-    title: 'Brand Positioning & Messaging',
+    title: 'Brandstory Copywriter',
     org: 'TTBTE',
     period: 'Oct 2024 to Mar 2025',
     desc: 'Developed go-to-market messaging frameworks and brand voice for early-stage startups. Wrote website copy, landing pages, social media scripts, and pitch narratives.',
@@ -19,7 +19,7 @@ const work = [
     tags: ['Brand Voice', 'GTM Messaging', 'Website Copy', 'Pitch Narratives'],
   },
   {
-    title: 'SEO Content & Growth Marketing',
+    title: 'Social Media Marketing Intern',
     org: 'Wylo',
     period: 'Apr 2024 to Sep 2024',
     desc: '32% increase in organic traffic over six months. 20% CTR improvement through headline testing. Tracked user behaviour via Google Analytics to refine strategy.',
@@ -28,7 +28,7 @@ const work = [
     tags: ['SEO Writing', 'Newsletters', 'Google Analytics', 'Headline Testing'],
   },
   {
-    title: 'Cultural Feature Writing',
+    title: 'Honorary Reporter',
     org: 'Korea.net (KOCIS)',
     period: 'May 2023 to Apr 2025',
     desc: 'Honorary Reporter for two years. Authored long-form cultural features promoting Korean heritage to a global English-speaking audience.',
@@ -37,7 +37,7 @@ const work = [
     tags: ['Long-form Writing', 'Cultural Journalism', 'Multimedia Storytelling'],
   },
   {
-    title: 'Entertainment & SEO Content',
+    title: 'SEO Content & Entertainment',
     org: 'OtakuKart',
     period: 'Mar 2023 to Mar 2024',
     desc: '500+ SEO-optimised articles published. CTR improvement through headline optimisation and keyword research. Conducted competitor analysis to boost organic visibility.',
@@ -135,7 +135,7 @@ export default function Marketing() {
             <span className="mkt-video__eyebrow">Beyond words</span>
             <h2>I edit video, too.</h2>
             <p>
-              Reels, short-form content, subtitled edits. Storytelling doesn't stop at copy.
+              Reels, short-form content, subtitled edits as a hobby. </br>Storytelling doesn't stop at copy.
               Sometimes the cut, the caption, and the pacing are the message.
             </p>
             <a

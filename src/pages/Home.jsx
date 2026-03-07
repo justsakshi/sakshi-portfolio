@@ -46,8 +46,6 @@ export default function Home() {
         <h1 className="home__name">SAKSHI</h1>
         <p className="home__tagline">Engineer&nbsp;&amp;&nbsp;<strong>Storyteller</strong></p>
         <p className="home__sub">Choose your side</p>
-        <a href="/about" className="home__about-link">About me</a>
-        <div className="home__arrow">↓</div>
       </div>
 
       {/* Tech side */}
