@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import './Contact.css'
 
 const helpWith = [
-  'automation pipelines', 'LLM integrations', 'data workflows',
-  'GTM engineering', 'Python scripting', 'API orchestration',
-  'brand storytelling', 'website copy', 'SEO strategy', 'campaign messaging',
+  'automation pipelines', 'LLM integrations', 'SEO strategy', 'data workflows',
+  'GTM engineering', 'video editing', 'Python scripting', 'website copy', 'API orchestration',
+  'brand storytelling', 'campaign messaging', 'translating',
   'brand voice', 'launch copy', 'newsletter writing',
   'building things that perform', 'making tech feel human',
   'content that converts', 'systems that scale',
@@ -44,22 +44,6 @@ function TypewriterCycler({ items }) {
   )
 }
 
-/*
-  HOW THIS WORKS:
-  This form submits silently to your Google Form in the background.
-  The user sees your beautiful custom UI — Google never shows.
-
-  To wire it up:
-  1. Open your Google Form: https://docs.google.com/forms/d/e/1FAIpQLSdEmesZKh98HJiUAPCTpCh3a7Go90wgYaotEOMr22pNWfhltg/viewform
-  2. Right-click the page → View Page Source
-  3. Search for "entry." — you'll find entry IDs like entry.123456789 for each field
-  4. Replace ENTRY_NAME, ENTRY_EMAIL, ENTRY_MESSAGE below with the actual entry IDs
-*/
-const FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdEmesZKh98HJiUAPCTpCh3a7Go90wgYaotEOMr22pNWfhltg/formResponse'
-const ENTRY_NAME = 'entry.REPLACE_NAME_ID'
-const ENTRY_EMAIL = 'entry.REPLACE_EMAIL_ID'
-const ENTRY_MESSAGE = 'entry.REPLACE_MESSAGE_ID'
-
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState(null) // null | 'sending' | 'sent' | 'error'
@@ -78,15 +62,18 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-    const body = new FormData()
-    body.append(ENTRY_NAME, form.name)
-    body.append(ENTRY_EMAIL, form.email)
-    body.append(ENTRY_MESSAGE, form.message)
     try {
-      // Google Forms doesn't allow CORS, so we use no-cors — it always "succeeds" visually
-      await fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', body })
-      setStatus('sent')
-      setForm({ name: '', email: '', message: '' })
+      const response = await fetch('https://formspree.io/f/mreygvkw', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      })
+      if (response.ok) {
+        setStatus('sent')
+        setForm({ name: '', email: '', message: '' })
+      } else {
+        setStatus('error')
+      }
     } catch {
       setStatus('error')
     }
