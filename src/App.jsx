@@ -1,3 +1,15 @@
+import { useEffect } from "react";
+
+useEffect(() => {
+  fetch("/api/track", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      page: window.location.pathname,
+      referrer: document.referrer,
+    }),
+  });
+}, []);
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import Home from './pages/Home'
