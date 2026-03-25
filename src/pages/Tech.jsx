@@ -5,7 +5,7 @@ const projects = [
   {
     title: 'GTM Engineer',
     org: 'Precise Leads',
-    year: '2025 to present',
+    year: 'November 2025 to March 2026',
     desc: 'Built Python + Make/n8n automations syncing lead data across APIs. Maintains clean, deduped ICP datasets and uses LLMs for research and personalisation.',
     tags: ['Python','Clay', 'n8n', 'Make', 'LLMs', 'REST APIs', 'JSON'],
     type: 'internship',
@@ -13,7 +13,7 @@ const projects = [
   {
     title: 'DBMS Project Intern',
     org: 'Hindustan Aeronautics Limited',
-    year: '2024',
+    year: 'May 2024 to June 2024',
     desc: 'Oracle SQL + Streamlit dashboard automating 80% of manual data entry for 1000+ aircraft components. Improved query performance by 40%.',
     tags: ['Oracle SQL', 'Python', 'Streamlit'],
     type: 'internship',
